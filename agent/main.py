@@ -6,7 +6,7 @@ from sender import send_data_to_api
 
 # This is a simple monitoring agent that collects availability data from a server and send it to an API.
 
-API_URL = "https://localhost:5050/api/data" #Replace with the corresponding API URL
+API_URL = "https://api:5050/api/data" #Replace with the corresponding API URL
 
 def job():
     """Job to collect data and send it to the API."""
