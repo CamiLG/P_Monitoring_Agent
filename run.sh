@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "Construyendo la imagen Docker sin caché..."
-if ! docker compose build --no-cache; then
-    echo "Error: No se pudo construir la imagen"
+echo "Building Docker image with no caché..."
+if ! docker-compose build --no-cache; then
+    echo "Error: Could not build the Docker image"
     exit 1
 fi
 
-echo "Iniciando los servicios con Docker Compose..."
-if ! docker compose up; then
-    echo "Error: No se pudieron iniciar los servicios"
+echo "Starting Docker Compose..."
+if ! docker-compose up; then
+    echo "Error: Could not start Docker Compose"
     exit 1
 fi
