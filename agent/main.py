@@ -23,8 +23,8 @@ def job():
 
 def main():
     """Main function to schedule the job."""
-    # schedule.every().day.at("00:00").do(job)  # Schedule the job to run daily at midnight
-    schedule.every(2).minutes.do(job) # Uncomment for testing every minute
+    schedule.every().day.at("00:00").do(job)  # Schedule the job to run daily at midnight
+    # schedule.every(2).minutes.do(job) # Uncomment for testing every minute
     print("Monitoring agent started. Waiting for the scheduled time...")
     while True:
         schedule.run_pending()
