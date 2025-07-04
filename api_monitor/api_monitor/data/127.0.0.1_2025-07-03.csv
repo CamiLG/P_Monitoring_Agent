@@ -1,0 +1,2 @@
+timestamp,processor,running_processes,logged_in_users,os_name,os_version
+2025-07-03T23:40:12,Apple M1,"[{'pid': 1, 'name': 'launchd', 'username': 'root'}, {'pid': 42, 'name': 'WindowServer', 'username': 'kmi'}, {'pid': 108, 'name': 'Python', 'username': 'kmi'}]",['kmi'],Darwin,23.5.0
