@@ -55,6 +55,10 @@ def get_data(ip_address):
         return jsonify({"error": f"No data found for this IP address: {ip_address}"}), 404
     return jsonify(data), 200
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    """Health check endpoint."""
+    return jsonify({"status": "ok"}), 200
     
 init_db() # Initialize the database
 
