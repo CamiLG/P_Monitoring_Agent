@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   api:
+    container_name: api_monitor
     build:
       context: ./api_monitor
     ports:
@@ -16,6 +17,7 @@ services:
       - POSTGRES_PORT=5432
 
   db:
+    container_name: postgres_db
     image: postgres:14
     restart: always
     environment:
@@ -26,6 +28,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   agent:
+    container_name: monitoring_agent
     build:
       context: ./agent
     depends_on:
